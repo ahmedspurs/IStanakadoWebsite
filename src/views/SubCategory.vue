@@ -28,13 +28,7 @@
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 px-4">
       <div
-        class="
-          max-w-sm
-          bg-white
-          rounded-lg
-          shadow-md
-          dark:bg-gray-800 dark:border-gray-700
-        "
+        class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
         :key="item"
         v-for="item in categories"
       >
@@ -46,14 +40,7 @@
           />
           <div class="pb-5">
             <h5
-              class="
-                text-xl text-center
-                font-semibold
-                tracking-tight
-                text-gray-900
-                dark:text-white
-                mb-4
-              "
+              class="text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white mb-4"
             >
               {{ item.name }}
             </h5>
@@ -68,7 +55,7 @@
 import { mapGetters } from "vuex";
 export default {
   created() {
-    this.veirfy();
+    // this.veirfy();
 
     this.$store.dispatch("fetchCategories");
     this.categories = this.allCategories.filter(
@@ -76,7 +63,7 @@ export default {
     );
   },
   computed: mapGetters(["allCategories"]),
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 };
 </script>
 

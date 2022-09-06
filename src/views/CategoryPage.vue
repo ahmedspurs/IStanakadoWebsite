@@ -15,7 +15,7 @@ export default {
     };
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
     let loader = this.$loading.show({
       // Optional parameters
       container: this.fullPage ? null : this.$refs.formContainer,
@@ -30,9 +30,8 @@ export default {
       this.show = true;
     }, 2000);
   },
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 };
 </script>
 
-<style>
-</style>
+<style></style>
