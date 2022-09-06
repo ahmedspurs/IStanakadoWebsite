@@ -6,37 +6,14 @@
         <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
           <div class="max-w-[570px] mb-12 lg:mb-0">
             <h2
-              class="
-                text-dark
-                mb-6
-                uppercase
-                font-bold
-                text-[32px]
-                sm:text-[40px]
-                lg:text-[36px]
-                xl:text-[40px]
-              "
+              class="text-dark mb-6 uppercase font-bold text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]"
             >
               كن علي تواصل معنا
             </h2>
 
             <div class="flex mb-8 max-w-[370px] w-full">
               <div
-                class="
-                  max-w-[60px]
-                  sm:max-w-[70px]
-                  w-full
-                  h-[60px]
-                  sm:h-[70px]
-                  flex
-                  items-center
-                  justify-center
-                  mr-6
-                  overflow-hidden
-                  bg-primary bg-opacity-5
-                  text-primary
-                  rounded
-                "
+                class="max-w-[60px] sm:max-w-[70px] w-full h-[60px] sm:h-[70px] flex items-center justify-center mr-6 overflow-hidden bg-primary bg-opacity-5 text-primary rounded"
               >
                 <svg
                   width="24"
@@ -58,21 +35,7 @@
             </div>
             <div class="flex mb-8 max-w-[370px] w-full">
               <div
-                class="
-                  max-w-[60px]
-                  sm:max-w-[70px]
-                  w-full
-                  h-[60px]
-                  sm:h-[70px]
-                  flex
-                  items-center
-                  justify-center
-                  mr-6
-                  overflow-hidden
-                  bg-primary bg-opacity-5
-                  text-primary
-                  rounded
-                "
+                class="max-w-[60px] sm:max-w-[70px] w-full h-[60px] sm:h-[70px] flex items-center justify-center mr-6 overflow-hidden bg-primary bg-opacity-5 text-primary rounded"
               >
                 <svg
                   width="24"
@@ -98,21 +61,7 @@
             </div>
             <div class="flex mb-8 max-w-[370px] w-full">
               <div
-                class="
-                  max-w-[60px]
-                  sm:max-w-[70px]
-                  w-full
-                  h-[60px]
-                  sm:h-[70px]
-                  flex
-                  items-center
-                  justify-center
-                  mr-6
-                  overflow-hidden
-                  bg-primary bg-opacity-5
-                  text-primary
-                  rounded
-                "
+                class="max-w-[60px] sm:max-w-[70px] w-full h-[60px] sm:h-[70px] flex items-center justify-center mr-6 overflow-hidden bg-primary bg-opacity-5 text-primary rounded"
               >
                 <svg
                   width="28"
@@ -139,83 +88,34 @@
                 <input
                   type="text"
                   placeholder="الاسم"
-                  class="
-                    w-full
-                    rounded
-                    py-3
-                    px-[14px]
-                    text-body-color text-base
-                    border border-[f0f0f0]
-                    outline-none
-                    focus-visible:shadow-none
-                    focus:border-primary
-                  "
+                  class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
               <div class="mb-6">
                 <input
                   type="email"
                   placeholder="الايميل"
-                  class="
-                    w-full
-                    rounded
-                    py-3
-                    px-[14px]
-                    text-body-color text-base
-                    border border-[f0f0f0]
-                    outline-none
-                    focus-visible:shadow-none
-                    focus:border-primary
-                  "
+                  class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
               <div class="mb-6">
                 <input
                   type="text"
                   placeholder="رقم الهاتف"
-                  class="
-                    w-full
-                    rounded
-                    py-3
-                    px-[14px]
-                    text-body-color text-base
-                    border border-[f0f0f0]
-                    outline-none
-                    focus-visible:shadow-none
-                    focus:border-primary
-                  "
+                  class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
               <div class="mb-6">
                 <textarea
                   rows="6"
                   placeholder="الرساله"
-                  class="
-                    w-full
-                    rounded
-                    py-3
-                    px-[14px]
-                    text-body-color text-base
-                    border border-[f0f0f0]
-                    resize-none
-                    outline-none
-                    focus-visible:shadow-none
-                    focus:border-primary
-                  "
+                  class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary"
                 ></textarea>
               </div>
               <div>
                 <button
                   type="submit"
-                  class="
-                    text-white
-                    bg-violet-600
-                    rounded
-                    px-4
-                    py-2
-                    transition
-                    hover:bg-opacity-90
-                  "
+                  class="text-white bg-violet-600 rounded px-4 py-2 transition hover:bg-opacity-90"
                 >
                   ارسل الرساله
                 </button>
@@ -237,7 +137,7 @@ export default {
     };
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
 
     let loader = this.$loading.show({
       // Optional parameters
@@ -253,9 +153,8 @@ export default {
       this.show = true;
     }, 1000);
   },
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 };
 </script>
 
-<style>
-</style>
+<style></style>

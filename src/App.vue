@@ -1,7 +1,7 @@
 <template>
   <div class="md:px-8 py-2 h-full relative">
     <div class="relative min-h-screen">
-      <app-header v-if="show"></app-header>
+      <app-header></app-header>
       <router-view class="pt-4" />
       <footer-copy class="pt-2"></footer-copy>
     </div>
@@ -28,7 +28,7 @@ export default {
     this.$store.dispatch("fetchDeliveries");
     this.$store.dispatch("fetchOrders");
     this.$store.dispatch("fetchAds");
-    this.veirfy();
+    // this.veirfy();
   },
   methods: {
     veirfy() {

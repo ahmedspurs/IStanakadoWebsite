@@ -2,8 +2,8 @@
   <div class="p-4" v-if="show">
     <single-product />
 
-    <hr>
-    <h2 class=" text-2xl  py-2">منتجات ذات صله</h2>
+    <hr />
+    <h2 class="text-2xl py-2">منتجات ذات صله</h2>
 
     <best-products />
   </div>
@@ -22,7 +22,7 @@ export default {
     };
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
 
     let loader = this.$loading.show({
       // Optional parameters
@@ -42,10 +42,8 @@ export default {
     this.$store.dispatch("fetchProducts");
   },
   computed: mapGetters(["allProducts"]),
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 };
 </script>
 
-
-    <style>
-</style>
+<style></style>
