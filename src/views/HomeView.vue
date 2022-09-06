@@ -39,7 +39,7 @@ export default {
     },
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
     this.$store.dispatch("fetchAds");
 
     let loader = this.$loading.show({
@@ -56,7 +56,7 @@ export default {
       this.show = true;
     }, 2000);
   },
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 
   name: "HomeView",
 };

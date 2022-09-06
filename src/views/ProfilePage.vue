@@ -1,8 +1,10 @@
 <template>
-  <div class="w-full " v-if="show">
-    <div class="flex flex-col justify-around items-center min-h-screen  px-4 -mt-8">
+  <div class="w-full" v-if="show">
+    <div
+      class="flex flex-col justify-around items-center min-h-screen px-4 -mt-8"
+    >
       <profule-content class="md:mx-2 w-full" />
-      <profile-header class=""/>
+      <profile-header class="" />
     </div>
   </div>
 </template>

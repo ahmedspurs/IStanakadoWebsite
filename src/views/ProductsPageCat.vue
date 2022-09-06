@@ -17,7 +17,7 @@ export default {
     };
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
 
     let loader = this.$loading.show({
       // Optional parameters
@@ -36,9 +36,8 @@ export default {
     this.$store.dispatch("fetchProducts");
   },
   computed: mapGetters(["allProducts"]),
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 };
 </script>
 
-<style>
-</style>
+<style></style>

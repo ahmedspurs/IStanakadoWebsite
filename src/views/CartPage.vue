@@ -2,7 +2,7 @@
   <div class="p-4 h-screen" v-if="show">
     <div
       class="hideCart h-3/4 flex flex-col justify-center items-center"
-      v-if="this.allCart.length == 0"
+      v-if="cart.length == 0"
     >
       <p>عفوا السله فارغه , الرجاء اضافه منتجات اولا</p>
       <router-link to="/ProductsPage">
@@ -11,20 +11,12 @@
         </button>
       </router-link>
     </div>
-    <div class="cartShow" v-if="!this.allCart.length == 0">
-      <h2 class="text-center  text-xl">سله التسوق</h2>
+    <div class="cartShow" v-if="!cart.length == 0">
+      <h2 class="text-center text-xl">سله التسوق</h2>
       <!-- component -->
       <div class="my-6">
         <div
-          class="
-            flex flex-col
-            w-full
-            p-8
-            text-gray-800
-            bg-white
-            shadow-lg
-            pin-r pin-y
-          "
+          class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y"
         >
           <div class="flex-1">
             <table
@@ -47,11 +39,11 @@
               </thead>
               <tbody class="pt-2">
                 <tr
-                class="py-2"
+                  class="py-2"
                   :key="product.id"
-                  v-for="(product, index) in $store.state.products.cart"
+                  v-for="(product, index) in cart"
                 >
-                  <td class="hidden text-center pb-4 md:table-cell ">
+                  <td class="hidden text-center pb-4 md:table-cell">
                     <a href="#">
                       <img
                         :src="
@@ -77,28 +69,13 @@
                   </td>
                   <td class="text-center">
                     <div
-                      class="
-                        relative
-                        justify-center
-                        items-center
-                        flex flex-col
-                        w-full
-                        h-8
-                      "
+                      class="relative justify-center items-center flex flex-col w-full h-8"
                     >
                       <input
                         type="number"
                         min="1"
                         v-model="product.qty"
-                        class="
-                          w-20
-                          font-semibold
-                          text-center text-gray-700
-                          outline-none
-                          focus:outline-none
-                          hover:text-black
-                          focus:text-black
-                        "
+                        class="w-20 font-semibold text-center text-gray-700 outline-none focus:outline-none hover:text-black focus:text-black"
                       />
                     </div>
                   </td>
@@ -124,24 +101,12 @@
                 <div class="p-4">
                   <div class="flex justify-between border-b">
                     <div
-                      class="
-                        lg:px-4 lg:py-2
-                        m-2
-                        text-sm
-                        font-bold
-                        text-center text-gray-800
-                      "
+                      class="lg:px-4 lg:py-2 m-2 text-sm font-bold text-center text-gray-800"
                     >
                       سعر المنتجات بدون رسوم التوصيل
                     </div>
                     <div
-                      class="
-                        lg:px-4 lg:py-2
-                        m-2
-                        text-xl
-                        font-bold
-                        text-center text-gray-900
-                      "
+                      class="lg:px-4 lg:py-2 m-2 text-xl font-bold text-center text-gray-900"
                     >
                       {{ totalPrice }} ج.س
                     </div>
@@ -149,20 +114,7 @@
 
                   <router-link to="/CheckoutPage">
                     <button
-                      class="
-                        flex
-                        justify-center
-                        p-3
-                        mt-6
-                        font-medium
-                        text-white
-                        bg-violet-600
-                        rounded-xl
-                        shadow
-                        items-center
-                        hover:bg-violet-500
-                        focus:shadow-outline focus:outline-none
-                      "
+                      class="flex justify-center p-3 mt-6 font-medium text-white bg-violet-600 rounded-xl shadow items-center hover:bg-violet-500 focus:shadow-outline focus:outline-none"
                     >
                       <span class="ml-2 mt-5px"> اتمام الطلب </span>
                     </button>
@@ -183,10 +135,11 @@ export default {
   data() {
     return {
       show: false,
+      cart: [],
     };
   },
   created() {
-    this.veirfy();
+    // this.veirfy();
     let loader = this.$loading.show({
       // Optional parameters
       container: this.fullPage ? null : this.$refs.formContainer,
@@ -194,14 +147,14 @@ export default {
       color: "#836aee",
       blur: "2px",
     });
-
+    this.cart = JSON.parse(localStorage.getItem("cart"));
     setTimeout(() => {
       loader.hide();
 
       this.show = true;
     }, 2000);
   },
-  inject: ["veirfy"],
+  // inject: ["veirfy"],
 
   methods: {
     /* Application Methods in case you want to make your custom buttons
@@ -217,11 +170,12 @@ export default {
       }
     },
     removeFromCart(index) {
-      this.$store.state.products.cart.splice(index, 1);
+      this.cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(this.cart));
     },
   },
 
-  computed: mapGetters(["totalPrice", "allCart"]),
+  computed: mapGetters(["totalPrice"]),
 };
 </script>
 
