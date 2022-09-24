@@ -9,7 +9,7 @@
         <div class="w-full">
           <img
             class="w-24 h-24"
-            :src="'http://localhost:5000/uploads' + item.image"
+            :src="'https://admin.istanakado.com/uploads' + item.image"
             alt=""
           />
         </div>

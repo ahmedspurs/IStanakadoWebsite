@@ -49,7 +49,7 @@
         <router-link :to="'/ProductPage/' + item.id">
           <img
             class="pb-2 rounded-t-lg w-full h-56"
-            :src="'http://localhost:5000/uploads/' + item.image"
+            :src="'https://admin.istanakado.com/uploads/' + item.image"
             alt="product image"
           />
           <div class="px-5 pb-5">
@@ -65,7 +65,8 @@
               <span
                 class="text-xl text-violet-600 font-bold text-gray-900 dark:text-white"
                 >{{
-                  parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)
+                  (parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)).toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 }}
                 ج.س
               </span>

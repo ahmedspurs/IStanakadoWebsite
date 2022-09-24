@@ -3,18 +3,20 @@
     <HomeDetails />
 
     <!-- ctaerory section -->
-    <div
-      class="flex justify-between items-center p-4 mt-20 mb-8"
-      v-if="allCategories.length != 0"
-    >
-      <span class="text-2xl font-bold text-violet-600"> الاقسام </span>
-    </div>
-    <home-category v-if="allCategories.length != 0" />
-
-    <!-- marketing section-->
+    
+     <!-- marketing section-->
     <div class="pb-8 px-4" v-if="ads.length != 0">
       <maeketing-section />
     </div>
+    <div
+      class="flex justify-center items-center p-4 mt-20 mb-8"
+      v-if="allCategories.length != 0"
+    >
+      <span class="text-2xl font-bold tex"> الاقسام </span>
+    </div>
+    <home-category v-if="allCategories.length != 0" />
+
+   
   </div>
 </template>
 

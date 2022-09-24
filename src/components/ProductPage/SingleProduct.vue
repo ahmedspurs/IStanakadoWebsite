@@ -3,7 +3,7 @@
     <div class="md:flex justify-around items-center pb-16">
       <div class="overflow-hidden block md:hidden">
         <img
-          :src="'http://localhost:5000/uploads/' + product[0].image"
+          :src="'https://admin.istanakado.com/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"
         />
       </div>
@@ -35,7 +35,7 @@
       </div>
       <div class="overflow-hidden md:block hidden w-full">
         <img
-          :src="'http://localhost:5000/uploads/' + product[0].image"
+          :src="'https://admin.istanakado.com/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"
         />
       </div>

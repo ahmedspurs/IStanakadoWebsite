@@ -196,7 +196,7 @@ export default {
           } else {
             try {
               const res = await axios.post(
-                "http://localhost:5000/api/v1/auth/register",
+                "https://admin.istanakado.com/api/v1/auth/register",
                 log
               );
               console.log(res.data);

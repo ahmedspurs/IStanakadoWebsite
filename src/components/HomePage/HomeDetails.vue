@@ -2,8 +2,8 @@
   <div class="bg-images rounded">
     <div
       class="
-        container
-        mx-auto
+        
+        
         flex flex-col
         items-center
         py-12

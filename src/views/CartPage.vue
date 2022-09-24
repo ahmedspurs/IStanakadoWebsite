@@ -46,7 +46,7 @@
                   <td class="hidden text-center pb-4 md:table-cell">
                     <a href="#">
                       <img
-                        :src="'http://localhost:5000/uploads/' + product.image"
+                        :src="'https://admin.istanakado.com/uploads/' + product.image"
                         class="w-20 rounded mx-auto mt-4"
                         alt="Thumbnail"
                       />
@@ -78,12 +78,14 @@
                   </td>
                   <td class="hidden md:table-cell">
                     <span class="text-sm font-medium">
-                      {{ product.buyPrice }}
+                      {{ product.buyPrice.toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
                     </span>
                   </td>
                   <td class="">
                     <span class="text-sm font-medium">
-                      {{ product.buyPrice * product.qty }}
+                      {{ (product.buyPrice * product.qty).toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}
                     </span>
                   </td>
                 </tr>
@@ -105,7 +107,8 @@
                     <div
                       class="lg:px-4 lg:py-2 m-2 text-xl font-bold text-center text-gray-900"
                     >
-                      {{ totalPrice }} ج.س
+                      {{ totalPrice.toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} ج.س
                     </div>
                   </div>
 

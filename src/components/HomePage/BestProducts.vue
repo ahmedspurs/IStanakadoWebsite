@@ -5,10 +5,10 @@
         <div
           class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 py-2"
         >
-          <router-link :to="'/ProductPage/' + item.id">
+          <router-link :to="'/ProductPage/' + item.id" @click="reload(item.id)">
             <img
               class="pb-2 rounded-t-lg w-full h-56"
-              :src="'http://localhost:5000/uploads/' + item.image"
+              :src="'https://admin.istanakado.com/uploads/' + item.image"
               alt="product image"
             />
             <div class="px-5 pb-5">
@@ -24,7 +24,8 @@
                 <span
                   class="text-xl text-gray-900 font-semibold dark:text-white"
                   >{{
-                    parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)
+                    (parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)).toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                   }}</span
                 >
                 <span class="text-sm mx-1 mt-2"> ج.س </span>
@@ -81,6 +82,12 @@ export default {
       },
     };
   },
+  methods:{
+    async reload(id){
+        await this.$router.push(`/ProductPage/${id}`)
+        location.reload()
+      }
+  }
 };
 </script>
 

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const state = {
   deliveries: [],
-  session_url: "http://localhost:5000/api/v1/deliveries",
+  session_url: "https://admin.istanakado.com/api/v1/deliveries",
 };
 
 const getters = {

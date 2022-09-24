@@ -5,8 +5,8 @@ const state = {
   user: {},
   msg: "",
   editeProfile: false,
-  session_url: "http://localhost:5000/api/v1/users",
-  login_url: "http://localhost:5000/api/v1/auth/login",
+  session_url: "https://admin.istanakado.com/api/v1/users",
+  login_url: "https://admin.istanakado.com/api/v1/auth/login",
   token: null,
 };
 
@@ -71,7 +71,7 @@ const actions = {
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
-    const res = await axios.get("http://localhost:5000/api/v1/auth/me", config);
+    const res = await axios.get("https://admin.istanakado.com/api/v1/auth/me", config);
     state.user = res.data.data;
   },
 };

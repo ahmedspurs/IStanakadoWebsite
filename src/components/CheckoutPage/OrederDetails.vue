@@ -38,8 +38,9 @@
             {{ item.qty }}
           </td>
           <td class="px-6 py-4">
-            {{ item.buyPrice * item.qty }}
-            $
+            {{ (item.buyPrice * item.qty ).toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}
+             ج.س
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -52,7 +53,8 @@
           </th>
 
           <td class="px-6 py-4" colspan="2">
-            {{ $store.state.checkoutComplete.details.deliveryPrice }}$
+            {{ $store.state.checkoutComplete.details.deliveryPrice.toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} ج.س
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -66,9 +68,10 @@
 
           <td class="px-6 py-4" colspan="2">
             {{
-              $store.state.checkoutComplete.details.totalPrice +
-              $store.state.checkoutComplete.details.deliveryPrice
-            }}$
+              ($store.state.checkoutComplete.details.totalPrice +
+              $store.state.checkoutComplete.details.deliveryPrice).toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            }} ج.س
           </td>
         </tr>
       </tbody>

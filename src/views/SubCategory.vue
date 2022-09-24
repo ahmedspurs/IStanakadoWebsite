@@ -26,25 +26,26 @@
         العنايه بالبشرة
       </h2>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 px-4">
-      <div
-        class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
-        :key="item"
-        v-for="item in categories"
-      >
-        <router-link :to="'/productsPage/' + item.id">
+    <div class="w-full px-4">
+      <div :key="item" v-for="(item,  index) in categories">
+        <router-link
+          :to="'/productsPage/' + item.id"
+          class="flex items-center px-8 py-4  rounded-xl w-full my-2"
+          :class="colors[index]"
+        >
           <img
-            class="pb-2 rounded-t-lg h-72 w-full"
-            :src="'http://localhost:5000/uploads/' + item.image"
+            class="pb-2 rounded-t-lg h-16 w-16"
+            :src="'https://admin.istanakado.com/uploads/' + item.image"
             alt="product image"
           />
-          <div class="pb-5">
-            <h5
-              class="text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white mb-4"
-            >
-              {{ item.name }}
-            </h5>
-          </div>
+
+          <h2
+            class="
+              text-white text-2xl px-8
+            "
+          >
+            {{ item.name }}
+          </h2>
         </router-link>
       </div>
     </div>
@@ -61,6 +62,144 @@ export default {
     this.categories = this.allCategories.filter(
       (word) => word.type == this.$route.params.type
     );
+  },
+  data() {
+    return {
+      colors: [
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+        "bg-green-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-violet-500",
+
+      ],
+    };
   },
   computed: mapGetters(["allCategories"]),
   // inject: ["veirfy"],

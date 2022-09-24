@@ -56,7 +56,7 @@
               </div>
               <div class="w-full">
                 <h4 class="font-bold text-dark text-xl mb-1">رقم الهاتف</h4>
-                <p class="text-base text-body-color">+249 12 939 5102</p>
+                <p class="text-base text-body-color">+249129395102</p>
               </div>
             </div>
             <div class="flex mb-8 max-w-[370px] w-full">
@@ -83,31 +83,30 @@
         </div>
         <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
           <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-            <form>
+            <form 
+                  @submit.prevent="send()"
+            >
               <div class="mb-6">
                 <input
                   type="text"
                   placeholder="الاسم"
+                  v-model="name"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
               <div class="mb-6">
                 <input
                   type="email"
+                  v-model="email"
                   placeholder="الايميل"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
-              <div class="mb-6">
-                <input
-                  type="text"
-                  placeholder="رقم الهاتف"
-                  class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
-                />
-              </div>
+             
               <div class="mb-6">
                 <textarea
                   rows="6"
+                  v-model="message"
                   placeholder="الرساله"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary"
                 ></textarea>
@@ -130,10 +129,14 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   data() {
     return {
       show: false,
+      name:"",
+      email : "",
+      message:""
     };
   },
   created() {
@@ -152,6 +155,72 @@ export default {
 
       this.show = true;
     }, 1000);
+  },
+   methods: {
+    async send() {
+      if (this.name == "" || this.email == "" || this.message == "") {
+        this.failed();
+      } else if (this.name != "" && this.email != "" && this.message != "") {
+        this.validate = true;
+
+        // do email function
+        const token = localStorage.getItem("userToken");
+        const config = {
+          headers: { Authorization: `Bearer ${token}` },
+        };
+        const log = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        };
+        try {
+          const res = await axios.post(
+            "https://admin.istanakado.com/api/v1/users/message",
+            log,
+            config
+          );
+          if (res.data.success) {
+            this.success();
+          } else {
+            this.waring();
+          }
+        } catch (error) {
+          this.waring();
+        }
+        this.name = "";
+        this.email = "";
+        this.message = "";
+      }
+    },
+    async success() {
+     this.$swal.fire({
+              position: "top-start",
+              icon: "success",
+              title: "تم   استلام رسالتك بنجاح   ",
+              showConfirmButton: false,
+              timer: 2000,
+            });
+    },
+    async failed() {
+       this.$swal.fire({
+              position: "top-start",
+
+              icon: "error",
+              title: "حدث خطأ ...",
+              text: "الرجاء ملء كل الحقول",     showConfirmButton: false,
+
+            });
+    },
+    async waring() {
+      this.$swal.fire({
+              position: "top-start",
+
+              icon: "error",
+              title: "حدث خطأ ...",
+              text: " الرجاء التحقق بالاتصال بالنترنت  ",     showConfirmButton: false,
+
+            });
+    },
   },
   // inject: ["veirfy"],
 };

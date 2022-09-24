@@ -4,7 +4,7 @@ const state = {
   categories: [],
   loadCat: false,
   status: "",
-  session_url: "http://localhost:5000/api/v1/categories",
+  session_url: "https://admin.istanakado.com/api/v1/categories",
 };
 
 const getters = {

@@ -27,7 +27,7 @@
       <div class="img w-full order-1 md:order-2">
         <img
           class="w-full h-60 rounded"
-          :src="'http://localhost:5000/uploads/' + ads[0].image"
+          :src="'https://admin.istanakado.com/uploads/' + ads[0].image"
         />
       </div>
     </div>
