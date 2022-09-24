@@ -3,12 +3,12 @@
     <div class="md:flex justify-around items-center pb-16">
       <div class="overflow-hidden block md:hidden">
         <img
-          :src="'https://admin.istanakado.com/uploads/' + product[0].image"
+          :src="'http://localhost:5000/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"
         />
       </div>
       <div class="space-y-4 p-4 w-full">
-        <h2 class="tracking-wider  text-2xl font-semibold">
+        <h2 class="tracking-wider text-2xl font-semibold">
           {{ product[0].name }}
         </h2>
         <h2 class="text-gray-600">هدايا</h2>
@@ -20,9 +20,7 @@
             parseFloat(product[0].buyPrice) +
             parseFloat(product[0].collectionPrice)
           }}
-          <span class="text-sm mt-2">
-            ج.س
-          </span>
+          <span class="text-sm mt-2"> ج.س </span>
         </h2>
         <div class="flex justify-between items-center w-full space-x-4">
           <div class="cart">
@@ -37,7 +35,7 @@
       </div>
       <div class="overflow-hidden md:block hidden w-full">
         <img
-          :src="'https://admin.istanakado.com/uploads/' + product[0].image"
+          :src="'http://localhost:5000/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"
         />
       </div>

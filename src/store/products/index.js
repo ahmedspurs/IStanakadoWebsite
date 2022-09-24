@@ -2,9 +2,9 @@ import axios from "axios";
 
 const state = {
   products: [],
-  cart: [],
+  cart: JSON.parse(localStorage.getItem("cart")) || [],
   empty: true,
-  session_url: "https://admin.istanakado.com/api/v1/products",
+  session_url: "http://localhost:5000/api/v1/products",
 };
 
 const getters = {
@@ -16,13 +16,13 @@ const getters = {
     return state.cart;
   },
   // cart total price
-  totalPrice() {
+  totalPrice(state) {
     let init = 0;
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    cart.forEach((item) => {
+    // let cart = JSON.parse(localStorage.getItem("cart"));
+    state.cart.forEach((item) => {
       init += parseFloat(item.buyPrice) * parseFloat(item.qty);
     });
-    localStorage.setItem("totalPrice", JSON.stringify(parseFloat(init)));
+    // localStorage.setItem("totalPrice", JSON.stringify(parseFloat(init)));
     return parseFloat(init);
   },
   // cart empty
@@ -82,6 +82,7 @@ const mutations = {
       cart.push(item);
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+    state.cart = JSON.parse(localStorage.getItem("cart"));
   },
 };
 

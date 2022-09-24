@@ -3,33 +3,20 @@
     <swiper :breakpoints="swiperOptions.breakpoints">
       <swiper-slide :key="item.id" v-for="item in allCategories">
         <div
-          class="
-            max-w-sm
-            bg-white
-            rounded-lg
-            shadow-md
-            dark:bg-gray-800 dark:border-gray-700
-          "
+          class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
         >
           <router-link :to="'/ProductsPage/' + item.id">
             <div class="flex justify-center image">
               <img
                 class="pb-2 rounded-t-lg h-16 w-16"
-                :src="'https://admin.istanakado.com/uploads/' + item.image"
+                :src="'http://localhost:5000/uploads/' + item.image"
                 alt="product image"
               />
             </div>
 
             <div class="py-2">
               <h5
-                class="
-                  text-xl text-center
-                  font-semibold
-                  tracking-tight
-                  text-gray-900
-                  dark:text-white
-                  mb-4
-                "
+                class="text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white mb-4"
               >
                 {{ item.name }}
               </h5>
@@ -81,5 +68,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

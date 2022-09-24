@@ -8,15 +8,7 @@
       <label for="simple-search" class="sr-only">بحث عن منتج</label>
       <div class="relative w-full md:w-1/2">
         <div
-          class="
-            flex
-            absolute
-            inset-y-0
-            left-0
-            items-center
-            pl-3
-            pointer-events-none
-          "
+          class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
         >
           <svg
             class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -35,23 +27,7 @@
           v-model="search"
           type="text"
           id="simple-search"
-          class="
-            bg-gray-50
-            border border-gray-300
-            text-gray-900 text-sm
-            rounded-lg
-            focus:ring-blue-500 focus:border-blue-500
-            block
-            w-full
-            pl-10
-            p-2.5
-            dark:bg-gray-700
-            dark:border-gray-600
-            dark:placeholder-gray-400
-            dark:text-white
-            dark:focus:ring-blue-500
-            dark:focus:border-blue-500
-          "
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="ابحث عن منتج"
           required=""
         />
@@ -70,32 +46,18 @@
       <div
         :key="item.id"
         v-for="item in filtered"
-        class="
-          max-w-sm
-          bg-white
-          rounded-lg
-          shadow-md
-          dark:bg-gray-800 dark:border-gray-700
-        "
+        class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
       >
         <router-link :to="'/ProductPage/' + item.id">
           <img
             class="pb-2 rounded-t-lg w-full h-56"
-            :src="'https://admin.istanakado.com/uploads/' + item.image"
+            :src="'http://localhost:5000/uploads/' + item.image"
             alt="product image"
           />
           <div class="px-5 pb-5">
             <a href="#">
               <h5
-                class="
-                  pt-2
-                  text-lg
-                  font-semibold
-                  tracking-tight
-                  text-gray-900
-                  dark:text-white
-                  mb-4
-                "
+                class="pt-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white mb-4"
               >
                 {{ item.name }}
               </h5>
@@ -103,12 +65,7 @@
 
             <div class="flex justify-between items-center">
               <span
-                class="
-                  text-xl text-violet-600
-                  font-bold
-                  text-gray-900
-                  dark:text-white
-                "
+                class="text-xl text-violet-600 font-bold text-gray-900 dark:text-white"
                 >{{
                   parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)
                 }}

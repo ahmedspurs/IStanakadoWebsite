@@ -3,33 +3,18 @@
     <swiper :breakpoints="swiperOptions.breakpoints">
       <swiper-slide :key="item" v-for="item in filtered">
         <div
-          class="
-            max-w-sm
-            bg-white
-            rounded-lg
-            shadow-md
-            dark:bg-gray-800 dark:border-gray-700
-            py-2
-          "
+          class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 py-2"
         >
           <router-link :to="'/ProductPage/' + item.id">
             <img
               class="pb-2 rounded-t-lg w-full h-56"
-              :src="'https://admin.istanakado.com/uploads/' + item.image"
+              :src="'http://localhost:5000/uploads/' + item.image"
               alt="product image"
             />
             <div class="px-5 pb-5">
               <a href="#">
                 <h5
-                  class="
-                    pt-2
-                    
-                  
-                    tracking-tight
-                    text-gray-900
-                    dark:text-white
-                    mb-1
-                  "
+                  class="pt-2 tracking-tight text-gray-900 dark:text-white mb-1"
                 >
                   {{ item.name }}
                 </h5>
@@ -37,20 +22,13 @@
 
               <div class="flex">
                 <span
-                  class="
-                    text-xl
-                    text-gray-900
-                    font-semibold
-                    dark:text-white
-                  "
+                  class="text-xl text-gray-900 font-semibold dark:text-white"
                   >{{
                     parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)
                   }}</span
-                  
                 >
-                <span class="text-sm mx-1 mt-2">
-                  ج.س
-                  </span>              </div>
+                <span class="text-sm mx-1 mt-2"> ج.س </span>
+              </div>
             </div>
           </router-link>
         </div>
@@ -106,20 +84,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-        
+<style></style>
