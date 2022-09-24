@@ -35,7 +35,7 @@
         <router-link :to="'/productsPage/' + item.id">
           <img
             class="pb-2 rounded-t-lg h-72 w-full"
-            :src="'https://admin.istanakado.com/uploads/' + item.image"
+            :src="'http://localhost:5000/uploads/' + item.image"
             alt="product image"
           />
           <div class="pb-5">

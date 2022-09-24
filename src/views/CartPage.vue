@@ -2,7 +2,7 @@
   <div class="p-4 h-screen" v-if="show">
     <div
       class="hideCart h-3/4 flex flex-col justify-center items-center"
-      v-if="cart.length == 0"
+      v-if="allCart.length == 0"
     >
       <p>عفوا السله فارغه , الرجاء اضافه منتجات اولا</p>
       <router-link to="/ProductsPage">
@@ -11,7 +11,7 @@
         </button>
       </router-link>
     </div>
-    <div class="cartShow" v-if="!cart.length == 0">
+    <div class="cartShow" v-if="!allCart.length == 0">
       <h2 class="text-center text-xl">سله التسوق</h2>
       <!-- component -->
       <div class="my-6">
@@ -41,15 +41,12 @@
                 <tr
                   class="py-2"
                   :key="product.id"
-                  v-for="(product, index) in cart"
+                  v-for="(product, index) in allCart"
                 >
                   <td class="hidden text-center pb-4 md:table-cell">
                     <a href="#">
                       <img
-                        :src="
-                          'https://admin.istanakado.com/uploads/' +
-                          product.image
-                        "
+                        :src="'http://localhost:5000/uploads/' + product.image"
                         class="w-20 rounded mx-auto mt-4"
                         alt="Thumbnail"
                       />
@@ -112,7 +109,7 @@
                     </div>
                   </div>
 
-                  <router-link to="/CheckoutPage">
+                  <router-link to="/CheckoutPage" @click="updateCart()">
                     <button
                       class="flex justify-center p-3 mt-6 font-medium text-white bg-violet-600 rounded-xl shadow items-center hover:bg-violet-500 focus:shadow-outline focus:outline-none"
                     >
@@ -135,7 +132,6 @@ export default {
   data() {
     return {
       show: false,
-      cart: [],
     };
   },
   created() {
@@ -147,7 +143,6 @@ export default {
       color: "#836aee",
       blur: "2px",
     });
-    this.cart = JSON.parse(localStorage.getItem("cart"));
     setTimeout(() => {
       loader.hide();
 
@@ -157,6 +152,12 @@ export default {
   // inject: ["veirfy"],
 
   methods: {
+    updateCart() {
+      localStorage.setItem(
+        "cart",
+        JSON.stringify(this.$store.state.products.cart)
+      );
+    },
     /* Application Methods in case you want to make your custom buttons
 		 rather than use <input type="number" />*/
     add(item) {
@@ -170,12 +171,15 @@ export default {
       }
     },
     removeFromCart(index) {
-      this.cart.splice(index, 1);
-      localStorage.setItem("cart", JSON.stringify(this.cart));
+      this.$store.state.products.cart.splice(index, 1);
+      localStorage.setItem(
+        "cart",
+        JSON.stringify(this.$store.state.products.cart)
+      );
     },
   },
 
-  computed: mapGetters(["totalPrice"]),
+  computed: mapGetters(["totalPrice", "allCart"]),
 };
 </script>
 

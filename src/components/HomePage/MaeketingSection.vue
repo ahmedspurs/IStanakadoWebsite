@@ -1,17 +1,7 @@
 <template>
   <div class="flex justify-center py-8">
     <div
-      class="
-        rounded
-        h-full
-        flex
-        justify-betweent
-        items-center
-        md:w-3/4
-        border border-gray-300
-        rounded-xl
-        p-4
-      "
+      class="rounded h-full flex justify-betweent items-center md:w-3/4 border border-gray-300 rounded-xl p-4"
     >
       <div class="text w-full px-4 order-2 md:order-1 md">
         <h2 class="md:text-4xl text-xl font-semibold text-violet-600">
@@ -37,7 +27,7 @@
       <div class="img w-full order-1 md:order-2">
         <img
           class="w-full h-60 rounded"
-          :src="'https://admin.istanakado.com/uploads/' + ads[0].image"
+          :src="'http://localhost:5000/uploads/' + ads[0].image"
         />
       </div>
     </div>
@@ -56,5 +46,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

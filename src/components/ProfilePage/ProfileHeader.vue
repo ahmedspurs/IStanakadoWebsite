@@ -1,23 +1,10 @@
 <template>
   <div class="header w-full md:w-1/2">
-   
-
     <div
-      class="
-        mt-2
-        flex
-        justify-center
-        items-center
-        p-4
-        bg-gray-200
-        w-full
-        rounded-xl
-        cursor-pointer
-      "
+      class="mt-2 flex justify-center items-center p-4 bg-gray-200 w-full rounded-xl cursor-pointer"
       @click="logout()"
     >
       <span class="text-xl"> تسجيل الخروج </span>
-    
     </div>
   </div>
 </template>
@@ -39,7 +26,7 @@ export default {
         headers: { Authorization: `Bearer ${token}` },
       };
       const res = await axios.get(
-        "https://admin.istanakado.com/api/v1/auth/logout",
+        "http://localhost:5000/api/v1/auth/logout",
         config
       );
       console.log(res);
@@ -52,5 +39,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

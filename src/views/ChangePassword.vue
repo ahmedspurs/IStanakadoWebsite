@@ -7,47 +7,20 @@
         <div class="w-full">
           <div class="">
             <div
-              class="
-                text-base
-                leading-6
-                space-y-4
-                text-gray-700
-                sm:text-lg sm:leading-7
-              "
+              class="text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
             >
               <div class="floating-input mb-5 relative">
                 <input
                   type="password"
                   v-model="password"
                   id="password"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="email"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >كلمه السر الحاليه</label
                 >
               </div>
@@ -56,34 +29,13 @@
                   type="password"
                   v-model="newPassword"
                   id="newPassword"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="email"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                 >
                   كلمه السر الجديدة</label
                 >
@@ -93,34 +45,13 @@
                   type="password"
                   v-model="reNewPassword"
                   id="reNewPassword"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="email"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                 >
                   اعد كتابه كلمه السر الجديدة</label
                 >
@@ -191,7 +122,7 @@ export default {
             headers: { Authorization: `Bearer ${token}` },
           };
           const res = await axios.put(
-            "https://admin.istanakado.com/api/v1/auth/updatepassword",
+            "http://localhost:5000/api/v1/auth/updatepassword",
             userData,
             config
           );

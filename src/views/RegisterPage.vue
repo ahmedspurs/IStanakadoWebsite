@@ -8,48 +8,20 @@
           </div>
           <div class="">
             <div
-              class="
-                py-8
-                text-base
-                leading-6
-                space-y-4
-                text-gray-700
-                sm:text-lg sm:leading-7
-              "
+              class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
             >
               <div class="floating-input mb-5 relative">
                 <input
                   type="email"
                   id="email"
                   v-model="email"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="email"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >الايميل</label
                 >
               </div>
@@ -58,34 +30,13 @@
                   type="text"
                   id="name"
                   v-model="userName"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="name"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >الاسم</label
                 >
               </div>
@@ -94,34 +45,13 @@
                   type="number"
                   id="tel"
                   v-model="tel"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="tel"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                 >
                   رقم الهاتف</label
                 >
@@ -131,34 +61,13 @@
                   type="text"
                   id="city"
                   v-model="city"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="city"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >المدينه</label
                 >
               </div>
@@ -167,34 +76,13 @@
                   type="text"
                   id="address"
                   v-model="address"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="address"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >العنوان</label
                 >
               </div>
@@ -203,34 +91,13 @@
                   type="password"
                   v-model="password"
                   id="password"
-                  class="
-                    border border-gray-200
-                    focus:outline-none
-                    rounded-md
-                    focus:border-gray-500 focus:shadow-sm
-                    w-full
-                    p-3
-                    h-16
-                  "
+                  class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
                   placeholder=" "
                   autocomplete="off"
                 />
                 <label
                   for="password"
-                  class="
-                    absolute
-                    top-0
-                    right-0
-                    px-3
-                    py-5
-                    h-full
-                    pointer-events-none
-                    transform
-                    origin-left
-                    transition-all
-                    duration-100
-                    ease-in-out
-                  "
+                  class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
                   >كلمه السر</label
                 >
               </div>
@@ -244,16 +111,7 @@
                 </button>
                 <button
                   v-if="!regLoad"
-                  class="
-                    bg-violet-400
-                    py-2
-                    text-white
-                    rounded
-                    text-xl
-                    flex
-                    justify-center
-                    items-center
-                  "
+                  class="bg-violet-400 py-2 text-white rounded text-xl flex justify-center items-center"
                 >
                   <span class="ml-8"> ...جاري تسجيل حساب جديد </span>
                   <span class="loader -mt-3"></span>
@@ -338,7 +196,7 @@ export default {
           } else {
             try {
               const res = await axios.post(
-                "https://admin.istanakado.com/api/v1/auth/register",
+                "http://localhost:5000/api/v1/auth/register",
                 log
               );
               console.log(res.data);
@@ -398,5 +256,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

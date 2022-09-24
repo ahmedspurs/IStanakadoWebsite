@@ -6,20 +6,7 @@
         <li class="relative my-2">
           <input class="sr-only peer" type="radio" value="cod" id="cod" />
           <label
-            class="
-              flex
-              p-5
-              bg-white
-              text-black
-              border border-gray-300
-              rounded-lg
-              cursor-pointer
-              focus:outline-none
-              hover:bg-gray-50
-              peer-checked:ring-green-500
-              peer-checked:ring-2
-              peer-checked:border-transparent
-            "
+            class="flex p-5 bg-white text-black border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
             for="cod"
             >الدفع عند الاستلام</label
           >
@@ -30,20 +17,7 @@
         <li class="relative my-2">
           <input class="sr-only peer" type="radio" value="bankak" id="bankak" />
           <label
-            class="
-              flex
-              p-5
-              bg-white
-              text-black
-              border border-gray-300
-              rounded-lg
-              cursor-pointer
-              focus:outline-none
-              hover:bg-gray-50
-              peer-checked:ring-green-500
-              peer-checked:ring-2
-              peer-checked:border-transparent
-            "
+            class="flex p-5 bg-white text-black border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
             for="bankak"
             >الدفع عبر بنكك</label
           >
@@ -82,5 +56,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

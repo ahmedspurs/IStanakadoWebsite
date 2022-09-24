@@ -17,15 +17,7 @@
         <input
           type="number"
           id="phone"
-          class="
-            border border-gray-200
-            focus:outline-none
-            rounded-md
-            focus:border-gray-500 focus:shadow-sm
-            w-full
-            p-3
-            h-16
-          "
+          class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
           placeholder=" "
           autocomplete="off"
           name="phone"
@@ -33,20 +25,7 @@
         />
         <label
           for="phone"
-          class="
-            absolute
-            top-0
-            right-0
-            px-3
-            py-5
-            h-full
-            pointer-events-none
-            transform
-            origin-left
-            transition-all
-            duration-100
-            ease-in-out
-          "
+          class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
           >رقم هاتف المستلم</label
         >
       </div>
@@ -61,16 +40,7 @@
       <div class="city py-2">
         <div
           @click="showCity = !showCity"
-          class="
-            delevery
-            flex
-            items-center
-            justify-between
-            border
-            p-4
-            rounded-xl
-            border-gray-200
-          "
+          class="delevery flex items-center justify-between border p-4 rounded-xl border-gray-200"
         >
           <span> المدينه </span>
           <!-- up svg -->
@@ -118,19 +88,7 @@
               id="khartoum1"
             />
             <label
-              class="
-                flex
-                p-5
-                bg-white
-                border border-gray-300
-                rounded-lg
-                cursor-pointer
-                focus:outline-none
-                hover:bg-gray-50
-                peer-checked:ring-green-500
-                peer-checked:ring-2
-                peer-checked:border-transparent
-              "
+              class="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
               for="khartoum1"
               >الخرطوم</label
             >
@@ -147,19 +105,7 @@
               id="bahri1"
             />
             <label
-              class="
-                flex
-                p-5
-                bg-white
-                border border-gray-300
-                rounded-lg
-                cursor-pointer
-                focus:outline-none
-                hover:bg-gray-50
-                peer-checked:ring-green-500
-                peer-checked:ring-2
-                peer-checked:border-transparent
-              "
+              class="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
               for="bahri1"
               >بحري</label
             >
@@ -176,19 +122,7 @@
               id="omdurman1"
             />
             <label
-              class="
-                flex
-                p-5
-                bg-white
-                border border-gray-300
-                rounded-lg
-                cursor-pointer
-                focus:outline-none
-                hover:bg-gray-50
-                peer-checked:ring-green-500
-                peer-checked:ring-2
-                peer-checked:border-transparent
-              "
+              class="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
               for="omdurman1"
               >امدرمان</label
             >
@@ -206,16 +140,7 @@
       <div class="address py-2">
         <div
           @click="showAddr = !showAddr"
-          class="
-            delevery
-            flex
-            items-center
-            justify-between
-            border
-            p-4
-            rounded-xl
-            border-gray-200
-          "
+          class="delevery flex items-center justify-between border p-4 rounded-xl border-gray-200"
         >
           <span> المنطقه </span>
           <!-- up svg -->
@@ -271,19 +196,7 @@
               :id="item.addr"
             />
             <label
-              class="
-                flex
-                p-5
-                bg-white
-                border border-gray-300
-                rounded-lg
-                cursor-pointer
-                focus:outline-none
-                hover:bg-gray-50
-                peer-checked:ring-green-500
-                peer-checked:ring-2
-                peer-checked:border-transparent
-              "
+              class="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-green-500 peer-checked:ring-2 peer-checked:border-transparent"
               :for="item.addr"
               >{{ item.addr }} / {{ item.deliveryTax }} جنيه</label
             >
@@ -295,16 +208,7 @@
       <div class="floating-input mb-5 relative">
         <textarea
           id="addressDetails"
-          class="
-            text-center
-            border border-gray-200
-            focus:outline-none
-            rounded-md
-            focus:border-gray-500 focus:shadow-sm
-            w-full
-            p-3
-            h-16
-          "
+          class="text-center border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
           placeholder=" "
           autocomplete="off"
           name="addrDetails"
@@ -312,20 +216,7 @@
         ></textarea>
         <label
           for="message"
-          class="
-            absolute
-            top-0
-            right-0
-            px-3
-            py-5
-            h-full
-            pointer-events-none
-            transform
-            origin-left
-            transition-all
-            duration-100
-            ease-in-out
-          "
+          class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
           >العنوان بالتفصيل</label
         >
       </div>
@@ -376,15 +267,7 @@
             <input
               type="number"
               id="payment"
-              class="
-                border border-gray-200
-                focus:outline-none
-                rounded-md
-                focus:border-gray-500 focus:shadow-sm
-                w-full
-                p-3
-                h-16
-              "
+              class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
               placeholder=" "
               autocomplete="off"
               name="paymentNumber"
@@ -392,20 +275,7 @@
             />
             <label
               for="phone"
-              class="
-                absolute
-                top-0
-                right-0
-                px-3
-                py-5
-                h-full
-                pointer-events-none
-                transform
-                origin-left
-                transition-all
-                duration-100
-                ease-in-out
-              "
+              class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
               >رقم العمليه</label
             >
           </div>
@@ -414,22 +284,7 @@
           <div class="flex justify-center items-center w-full">
             <label
               for="dropzone-file"
-              class="
-                flex flex-col
-                justify-center
-                items-center
-                w-full
-                h-32
-                bg-gray-50
-                rounded-lg
-                border-2 border-gray-300 border-dashed
-                cursor-pointer
-                dark:hover:bg-bray-800 dark:bg-gray-700
-                hover:bg-gray-100
-                dark:border-gray-600
-                dark:hover:border-gray-500
-                dark:hover:bg-gray-600
-              "
+              class="flex flex-col justify-center items-center w-full h-32 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
             >
               <div class="flex flex-col justify-center items-center pt-5 pb-6">
                 <svg
@@ -611,7 +466,7 @@ export default {
             headers: { Authorization: `Bearer ${token}` },
           };
           const res = await axios.post(
-            "https://admin.istanakado.com/api/v1/orders/mbok",
+            "http://localhost:5000/api/v1/orders/mbok",
             formData,
             config
           );
@@ -625,10 +480,10 @@ export default {
             });
             this.$store.state.checkoutComplete.cart =
               this.$store.state.products.cart;
-            this.$store.state.checkoutComplete.details = checkoutCart;
             this.$router.push("/OrderComplete");
             console.log(res.data.message);
             this.$store.state.products.cart = [];
+            localStorage.setItem("cart", JSON.stringify(this.$store.state.products.cart));
           } else {
             this.$swal.fire({
               icon: "error",
