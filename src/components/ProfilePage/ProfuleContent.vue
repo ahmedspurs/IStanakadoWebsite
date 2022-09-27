@@ -1,10 +1,9 @@
 <template>
   <div class="content w-full md:w-1/2 pt-2">
-    <div class="imag  rounded w-full mb-8">
+    <div class="imag rounded w-full mb-8">
       <div class="flex justify-center flex-col items-center p-4 my-2">
         <div class="text-center py-2 mt-2">
-          <h2 class="font-bold ">{{ user.userName }}</h2>
-       
+          <h2 class="font-bold">{{ user.userName }}</h2>
         </div>
       </div>
     </div>
@@ -26,7 +25,7 @@
           d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
         />
       </svg>
-      <span class="font-  mx-4"> تعديل الملف الشخصي </span>
+      <span class="font- mx-4"> تعديل الملف الشخصي </span>
     </div>
     <div v-show="showModal1">
       <form class="w-full p-4" @submit.prevent="updateUser(user.id)">
@@ -34,35 +33,14 @@
           <input
             type="text"
             id="name"
-            class="
-              border border-gray-200
-              focus:outline-none
-              rounded-md
-              focus:border-gray-500 focus:shadow-sm
-              w-full
-              p-3
-              h-16
-            "
+            class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
             placeholder=" "
             autocomplete="off"
             v-model="user.userName"
           />
           <label
             for="email"
-            class="
-              absolute
-              top-0
-              right-0
-              px-3
-              py-5
-              h-full
-              pointer-events-none
-              transform
-              origin-left
-              transition-all
-              duration-100
-              ease-in-out
-            "
+            class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
             >الاسم</label
           >
         </div>
@@ -70,35 +48,14 @@
           <input
             type="email"
             id="email"
-            class="
-              border border-gray-200
-              focus:outline-none
-              rounded-md
-              focus:border-gray-500 focus:shadow-sm
-              w-full
-              p-3
-              h-16
-            "
+            class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
             placeholder=" "
             autocomplete="off"
             v-model="user.email"
           />
           <label
             for="email"
-            class="
-              absolute
-              top-0
-              right-0
-              px-3
-              py-5
-              h-full
-              pointer-events-none
-              transform
-              origin-left
-              transition-all
-              duration-100
-              ease-in-out
-            "
+            class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
             >الايميل</label
           >
         </div>
@@ -107,35 +64,14 @@
           <input
             type="number"
             id="phone"
-            class="
-              border border-gray-200
-              focus:outline-none
-              rounded-md
-              focus:border-gray-500 focus:shadow-sm
-              w-full
-              p-3
-              h-16
-            "
+            class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
             placeholder=" "
             autocomplete="off"
             v-model="user.tel"
           />
           <label
             for="phone"
-            class="
-              absolute
-              top-0
-              right-0
-              px-3
-              py-5
-              h-full
-              pointer-events-none
-              transform
-              origin-left
-              transition-all
-              duration-100
-              ease-in-out
-            "
+            class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
             >رقم الهاتف</label
           >
         </div>
@@ -144,35 +80,14 @@
           <input
             type="text"
             id="city"
-            class="
-              border border-gray-200
-              focus:outline-none
-              rounded-md
-              focus:border-gray-500 focus:shadow-sm
-              w-full
-              p-3
-              h-16
-            "
+            class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
             placeholder=" "
             autocomplete="off"
             v-model="user.city"
           />
           <label
             for="city"
-            class="
-              absolute
-              top-0
-              right-0
-              px-3
-              py-5
-              h-full
-              pointer-events-none
-              transform
-              origin-left
-              transition-all
-              duration-100
-              ease-in-out
-            "
+            class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
             >المدينه</label
           >
         </div>
@@ -181,42 +96,21 @@
           <input
             type="text"
             id="address"
-            class="
-              border border-gray-200
-              focus:outline-none
-              rounded-md
-              focus:border-gray-500 focus:shadow-sm
-              w-full
-              p-3
-              h-16
-            "
+            class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
             placeholder=" "
             autocomplete="off"
             v-model="user.address"
           />
           <label
             for="address"
-            class="
-              absolute
-              top-0
-              right-0
-              px-3
-              py-5
-              h-full
-              pointer-events-none
-              transform
-              origin-left
-              transition-all
-              duration-100
-              ease-in-out
-            "
+            class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
             >العنوان</label
           >
         </div>
 
         <div class="checkout">
           <button
-            class="bg-violet-600 px-4 py-2 text-white rounded font- "
+            class="bg-violet-600 px-4 py-2 text-white rounded font-"
             expand="block"
             @click="updateUser()"
           >
@@ -244,11 +138,13 @@
           d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
         />
       </svg>
-      <span class="font-  mx-4"> تعديل كلمه المرور </span>
+      <span class="font- mx-4"> تعديل كلمه المرور </span>
     </div>
 
-     <router-link to="/LastOrders">
-      <div class="mt-2 flex items-center p-4 shadow rounded-xl cursor-pointer w-full">
+    <router-link to="/LastOrders">
+      <div
+        class="mt-2 flex items-center p-4 shadow rounded-xl cursor-pointer w-full"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 text-violet-600"
@@ -263,7 +159,7 @@
             d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
           />
         </svg>
-        <span class="font-   mx-4"> الطلبات السابقه </span>
+        <span class="font- mx-4"> الطلبات السابقه </span>
       </div>
     </router-link>
     <div v-show="showModal2">
@@ -313,7 +209,6 @@ export default {
         user: user,
       };
       try {
-        console.log(this.updateMessage);
         await this.$store.dispatch("updateUser", updateData);
         if (this.updateMessage) {
           loader.hide();
@@ -326,8 +221,6 @@ export default {
             showConfirmButton: false,
             timer: 2000,
           });
-
-          console.log("SUCCESS !");
         } else {
           loader.hide();
           this.$swal.fire({
@@ -336,8 +229,6 @@ export default {
             text: "لم يتم تحديث الملف الشخصي !",
             confirmButtonText: "حسنا",
           });
-
-          console.log("ERROR !");
         }
       } catch (err) {
         loader.hide();

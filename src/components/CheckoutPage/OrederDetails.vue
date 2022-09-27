@@ -27,20 +27,23 @@
           </th>
           <td class="px-6 py-4">
             <img
-              :src="'http://localhost:5000/uploads/' + item.image"
+              :src="'https://admin.istanakado.com/uploads/' + item.image"
               alt=""
               class="w-20"
             />
           </td>
           <td class="px-6 py-4">{{ item.name }}</td>
-          <td class="px-6 py-4">{{ item.buyPrice }} $</td>
+          <td class="px-6 py-4">{{ item.buyPrice }} ج.س</td>
           <td class="px-6 py-4">
             {{ item.qty }}
           </td>
           <td class="px-6 py-4">
-            {{ (item.buyPrice * item.qty ).toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}
-             ج.س
+            {{
+              (item.buyPrice * item.qty)
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            }}
+            ج.س
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -53,8 +56,12 @@
           </th>
 
           <td class="px-6 py-4" colspan="2">
-            {{ $store.state.checkoutComplete.details.deliveryPrice.toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} ج.س
+            {{
+              $store.state.checkoutComplete.details.deliveryPrice
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            }}
+            ج.س
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -68,10 +75,14 @@
 
           <td class="px-6 py-4" colspan="2">
             {{
-              ($store.state.checkoutComplete.details.totalPrice +
-              $store.state.checkoutComplete.details.deliveryPrice).toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            }} ج.س
+              (
+                $store.state.checkoutComplete.details.totalPrice +
+                $store.state.checkoutComplete.details.deliveryPrice
+              )
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            }}
+            ج.س
           </td>
         </tr>
       </tbody>

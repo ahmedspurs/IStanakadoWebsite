@@ -33,7 +33,6 @@ export default {
   methods: {
     veirfy() {
       if (localStorage.getItem("gift_user_token")) {
-        console.log("loggend in");
         this.show = true;
       } else if (localStorage.getItem("gift_user_token") == null) {
         this.$router.push("/LoginPage");

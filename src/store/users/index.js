@@ -26,7 +26,6 @@ const actions = {
   async login({ commit, state }, user) {
     try {
       const response = await axios.post(state.login_url, user);
-      console.log("success");
       localStorage.setItem("gift_user_token", response.data.token);
       commit("loginUser", response.data);
     } catch (err) {
@@ -47,8 +46,6 @@ const actions = {
   },
   async updateUser({ commit, state }, payload) {
     const { id, user } = payload;
-    console.log(user.userName);
-    console.log(user.role);
     const token = localStorage.getItem("gift_user_token");
     const config = {
       headers: { Authorization: `Bearer ${token}` },
@@ -71,7 +68,10 @@ const actions = {
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
-    const res = await axios.get("https://admin.istanakado.com/api/v1/auth/me", config);
+    const res = await axios.get(
+      "https://admin.istanakado.com/api/v1/auth/me",
+      config
+    );
     state.user = res.data.data;
   },
 };
@@ -86,8 +86,6 @@ const mutations = {
   loginUser: (state, user) => {
     if (user.success == true) {
       state.token = user.token;
-    } else {
-      console.log(user.success);
     }
   },
   editUser: (state) => {
