@@ -1,6 +1,6 @@
 <template>
   <!-- component -->
-  <nav class="bg-white border-b border-gray-300">
+  <nav class="bg-white md:border-b border-gray-300">
     <div
       class="
         container
@@ -111,6 +111,10 @@
               font-medium
               hover:text-violet-500
               md:mx-4 md:my-0
+              md:border-none
+              border-b boder-gray-300
+              p-4
+              md:p-0
             "
             to="/"
             @click="hidden = !hidden"
@@ -123,6 +127,10 @@
               font-medium
               hover:text-violet-500
               md:mx-4 md:my-0
+              md:border-none
+              border-b boder-gray-300
+              p-4
+              md:p-0
             "
             to="/CategoryPage"
             @click="hidden = !hidden"
@@ -135,6 +143,10 @@
               font-medium
               hover:text-violet-500
               md:mx-4 md:my-0
+              md:border-none
+              border-b boder-gray-300
+              p-4
+              md:p-0
             "
             to="/ProductsPage"
             @click="hidden = !hidden"
@@ -147,6 +159,10 @@
               font-medium
               hover:text-violet-500
               md:mx-4 md:my-0
+              md:border-none
+              border-b boder-gray-300
+              p-4
+              md:p-0
             "
             to="/ContactPage"
             @click="hidden = !hidden"
@@ -154,13 +170,15 @@
           >
            <router-link
             class="
-              my-1
-              md:hidden
-              block
+                 my-1
               text-sm text-gray-700
               font-medium
               hover:text-violet-500
               md:mx-4 md:my-0
+              md:border-none
+              border-b boder-gray-300
+              p-4
+              md:p-0
             "
             to="/ProfilePage"
             @click="hidden = !hidden"
@@ -175,7 +193,7 @@
           to="/CartPage"
         >
           <svg
-            class="h-6 w-6"
+            class="h-6 w-6 "
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -203,25 +221,7 @@
             "
           ></span>
         </router-link>
-        <router-link
-          class="relative text-gray-700 hover:text-gray-600"
-          to="/ProfilePage"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-            />
-          </svg>
-        </router-link>
+     
       </div>
     </div>
   </nav>

@@ -6,8 +6,7 @@
         justify-center
         items-center
         rounded
-        py-28
-        p-4
+        py-2
         bg-overlay-cats
       "
     >
@@ -15,8 +14,8 @@
         :to="'/SubCategory/' + special"
         class="
           text-center
-          px-4
           w-full
+          px-4
           flex flex-col
           justify-center
           items-center
@@ -27,12 +26,12 @@
             flex
             items-center
             px-8
-            py-4
-            bg-pink-500
+            bg-violet-500
             rounded-xl
             w-full
             md:w-1/2
             my-2
+            h-[122px]
           "
         >
           <svg
@@ -150,6 +149,7 @@
             rounded-xl
             w-full
             md:w-1/2
+            h-[122px]
             my-2
           "
         >
@@ -232,10 +232,11 @@
             items-center
             px-8
             py-4
-            bg-violet-500
+            bg-pink-500
             rounded-xl
             w-full
             md:w-1/2
+            h-[122px]
             my-2
           "
         >
@@ -323,6 +324,7 @@
             rounded-xl
             w-full
             md:w-1/2
+            h-[122px]
             my-2
           "
         >

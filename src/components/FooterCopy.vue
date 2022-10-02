@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 hidden">
+  <div class="px-4 ">
     <hr />
     <div class="flex items-center justify-between p-2">
       <div>متجر Istana Kado</div>

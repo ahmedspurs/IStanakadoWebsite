@@ -615,17 +615,16 @@ export default {
       this.addrId = id;
     },
     async checkout() {
-      const checkoutCart = {
+       const checkoutCart = {
         userId: this.user.id,
         cart: this.cartId,
-        payment: "true",
         city: this.city,
         phone: this.phone,
         address: this.address,
-        photos: this.image,
         addrDetails: this.addrDetails,
-        paymentNumber: this.paymentNumber,
+        transferNumber: this.transferNumber,
         totalPrice: this.totalCart,
+        deliveryPrice: this.delPrice,
       };
        let loader = this.$loading.show({
       // Optional parameters
@@ -674,19 +673,25 @@ export default {
             config
           );
           if (res.data.success) {
+          this.$swal.fire({
+              position: "top-start",
+              icon: "success",
+              title: "تم طلب المنتجات بنجاح   ",
+              showConfirmButton: false,
+              timer: 2000,
+            });
             loader.hide()
 
             this.$store.state.checkoutComplete.cart =
               this.$store.state.products.cart;
             this.$store.state.checkoutComplete.details = checkoutCart;
-            this.$router.push("/OrderComplete");
-            console.log(res.data.message);
-          this.$store.state.products.cart = [];
+            this.$store.state.products.cart = [];
             localStorage.setItem(
               "cart",
               JSON.stringify(this.$store.state.products.cart)
             );
-
+            this.$router.push("/OrderComplete");
+            console.log(res.data.message);
           } else {
  this.$swal.fire({
               position: "top-start",

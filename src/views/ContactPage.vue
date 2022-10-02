@@ -6,7 +6,7 @@
         <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
           <div class="max-w-[570px] mb-12 lg:mb-0">
             <h2
-              class="text-dark mb-6 uppercase font-bold text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+              class="text-dark mb-6 uppercase font-bold text-xl px-10 md:text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]"
             >
               كن علي تواصل معنا
             </h2>
@@ -27,10 +27,10 @@
                 </svg>
               </div>
               <div class="w-full">
-                <h4 class="font-bold text-dark text-xl mb-1">موقعنا</h4>
+                <h4 class="font-bold text-dark  mb-1">موقعنا</h4>
                 <p class="text-base text-body-color">
-                  شارع الستين مع تقاطع المشتل جوار الامين ماركت
-                </p>
+                  شمال تقاطع المشتل مع الستين شرق سوبر ماركت المعلم
+                  </p>
               </div>
             </div>
             <div class="flex mb-8 max-w-[370px] w-full">
@@ -55,8 +55,8 @@
                 </svg>
               </div>
               <div class="w-full">
-                <h4 class="font-bold text-dark text-xl mb-1">رقم الهاتف</h4>
-                <p class="text-base text-body-color">+249129395102</p>
+                <h4 class="font-bold text-dark  mb-1">رقم الهاتف</h4>
+                <p class="text-base text-body-color"> 249111055581 + </p>
               </div>
             </div>
             <div class="flex mb-8 max-w-[370px] w-full">
@@ -75,7 +75,7 @@
                 </svg>
               </div>
               <div class="w-full">
-                <h4 class="font-bold text-dark text-xl mb-1">الايميل</h4>
+                <h4 class="font-bold text-dark  mb-1">الايميل</h4>
                 <p class="text-base text-body-color">istanakado249@gmail.com</p>
               </div>
             </div>

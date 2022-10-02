@@ -38,8 +38,7 @@
             {{ item.qty }}
           </td>
           <td class="px-6 py-4">
-            {{ (item.buyPrice * item.qty ).toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}
+            {{ (item.buyPrice * item.qty )}}
              ج.س
           </td>
         </tr>
@@ -53,8 +52,7 @@
           </th>
 
           <td class="px-6 py-4" colspan="2">
-            {{ $store.state.checkoutComplete.details.deliveryPrice.toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} ج.س
+            {{ $store.state.checkoutComplete.details.deliveryPrice }} ج.س
           </td>
         </tr>
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -68,9 +66,8 @@
 
           <td class="px-6 py-4" colspan="2">
             {{
-              ($store.state.checkoutComplete.details.totalPrice +
-              $store.state.checkoutComplete.details.deliveryPrice).toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+              $store.state.checkoutComplete.details.totalPrice +
+              $store.state.checkoutComplete.details.deliveryPrice
             }} ج.س
           </td>
         </tr>
@@ -80,7 +77,7 @@
 </template>
 
 <script>
-export default {};
+
 </script>
 
 <style></style>

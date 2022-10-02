@@ -2,39 +2,39 @@
   <div class="subCat">
     <div class="text-center pt-8">
       <h2
-        class="text-center mb-10 text-2xl font-bold"
+        class="text-center mb-10 text-xl  text-gray-600"
         v-if="$route.params.type == 'formal'"
       >
         هدايا حسب النوع
       </h2>
       <h2
-        class="text-center mb-10 text-2xl font-bold"
+        class="text-center mb-10 text-xl  text-gray-600"
         v-if="$route.params.type == 'special'"
       >
         المناسبات
       </h2>
       <h2
-        class="text-center mb-10 text-2xl font-bold"
+        class="text-center mb-10 text-xl  text-gray-600"
         v-if="$route.params.type == 'to'"
       >
         هديه الي شخص
       </h2>
       <h2
-        class="text-center mb-10 text-2xl font-bold"
+        class="text-center mb-10 text-xl  text-gray-600"
         v-if="$route.params.type == 'beauty'"
       >
         العنايه بالبشرة
       </h2>
     </div>
-    <div class="w-full px-4">
-      <div :key="item" v-for="(item,  index) in categories">
+    <div class="w-full px-4 ">
+      <div class="flex justify-center flex-col items-center" :key="item" v-for="(item,  index) in categories">
         <router-link
           :to="'/productsPage/' + item.id"
-          class="flex items-center px-8 py-4  rounded-xl w-full my-2"
+          class="flex items-center px-12 h-[122px]  rounded-xl  my-2 w-full md:w-1/2"
           :class="colors[index]"
         >
           <img
-            class="pb-2 rounded-t-lg h-16 w-16"
+            class=" rounded-t-lg h-16 w-16"
             :src="'https://admin.istanakado.com/uploads/' + item.image"
             alt="product image"
           />

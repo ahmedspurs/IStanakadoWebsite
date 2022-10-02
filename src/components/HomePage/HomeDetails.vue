@@ -3,11 +3,9 @@
     <div
       class="
         
-        
+        py-40
         flex flex-col
         items-center
-        py-12
-        sm:py-24
         bg-overlay
         rounded
       "
