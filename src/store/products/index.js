@@ -59,12 +59,6 @@ const mutations = {
   newProduct: (state, product) => {
     state.products.unshift(product);
   },
-  removeProduct: (state) => {
-    console.log(state.products);
-  },
-  editProduct: (state) => {
-    console.log(state.products);
-  },
   // add item to the cart
   addItem(state, item) {
     if (!localStorage.getItem("cart")) {

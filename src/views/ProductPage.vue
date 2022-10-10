@@ -37,7 +37,6 @@ export default {
 
       this.show = true;
     }, 2000);
-    console.log(this.$route.params.id);
     this.$store.dispatch("fetchCategories");
     this.$store.dispatch("fetchProducts");
   },

@@ -199,7 +199,6 @@ export default {
                 "https://admin.istanakado.com/api/v1/auth/register",
                 log
               );
-              console.log(res.data);
               if (res.data.success) {
                 this.userName = "";
                 this.email = "";

@@ -24,8 +24,12 @@
                 <span
                   class="text-xl text-gray-900 font-semibold dark:text-white"
                   >{{
-                    (parseFloat(item.buyPrice) + parseFloat(item.collectionPrice)).toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    (
+                      parseFloat(item.buyPrice) +
+                      parseFloat(item.collectionPrice)
+                    )
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                   }}</span
                 >
                 <span class="text-sm mx-1 mt-2"> ج.س </span>
@@ -58,8 +62,6 @@ export default {
     this.filtered = this.allProducts.filter(
       (word) => word.category == this.product[0].category
     );
-    console.log(this.filtered);
-    console.log(this.product);
   },
   data() {
     return {
@@ -82,12 +84,12 @@ export default {
       },
     };
   },
-  methods:{
-    async reload(id){
-        await this.$router.push(`/ProductPage/${id}`)
-        location.reload()
-      }
-  }
+  methods: {
+    async reload(id) {
+      await this.$router.push(`/ProductPage/${id}`);
+      location.reload();
+    },
+  },
 };
 </script>
 

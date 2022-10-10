@@ -63,8 +63,6 @@ export default {
     this.filtered = this.allProducts.filter(
       (word) => word.category == this.product[0].category
     );
-    console.log(this.filtered);
-    console.log(this.product);
   },
 
   methods: {
@@ -86,7 +84,6 @@ export default {
         showConfirmButton: false,
         timer: 2000,
       });
-      console.log(this.$store.state.products.cart);
     },
   },
 };
