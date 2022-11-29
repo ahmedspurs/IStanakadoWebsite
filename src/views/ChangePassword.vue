@@ -126,7 +126,6 @@ export default {
             userData,
             config
           );
-          console.log(res.data);
 
           if (res.data.success) {
             loader.hide();
@@ -162,7 +161,6 @@ export default {
         text: "الرجاء ملئ حميع الحقول",
         confirmButtonText: "حسنا",
       });
-      console.log("role");
     },
     async wrong() {
       await this.$swal.fire({
@@ -171,7 +169,6 @@ export default {
         text: " كلمه المرور خاطئه  ",
         confirmButtonText: "حسنا",
       });
-      console.log("role");
     },
 
     clearFields() {
