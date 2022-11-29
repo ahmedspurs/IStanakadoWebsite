@@ -9,8 +9,8 @@
     i fetch users and dilevery data becuase i need to sent it to cod api
     
    -->
-    
-      <div class="checkout p-4">
+    <div class="flex items-center justify-center bankak">
+       <div class="checkout p-4">
         <form class="w-full" ref="form" @submit.prevent="checkout()">
           <!-- phone nunber input -->
           <div class="floating-input mb-5 relative">
@@ -549,6 +549,8 @@
           </div>
         </form>
       </div>
+    </div>
+     
     
 </template>
 <script>

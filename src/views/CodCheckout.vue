@@ -8,8 +8,9 @@
     
      -->
 
-  <div class="checkout p-4" v-if="show">
-    <form class="w-full">
+<div class="flex justify-center items-center">
+ <div class="checkout p-4" v-if="show">
+    <form >
       <!-- phone nunber input -->
       <div class="floating-input relative">
         <input
@@ -381,6 +382,8 @@
       </div>
     </form>
   </div>
+</div>
+ 
 </template>
 <script>
 import { mapGetters } from "vuex";

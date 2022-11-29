@@ -37,11 +37,19 @@
             class="
               text-violet-700 text-xl
               font-bold
-              md:text-2xl
+              md:text-sm
               hover:text-gray-700
+              flex items-center
             "
             to="/"
-            >Istana Kado</router-link
+            >
+            <img src="../../public/assets/logo_icon.jpeg" class="w-8 h-8" alt="">
+            
+            <span class="mt-1">
+            استاناكادو  
+            </span>
+            
+            </router-link
           >
         </div>
 

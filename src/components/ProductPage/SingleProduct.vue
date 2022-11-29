@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="md:flex justify-around items-center pb-16">
+    <div class="md:grid grid-cols-4 justify-center items-center pb-16">
       <div class="overflow-hidden block md:hidden">
         <img
           :src="'https://admin.istanakado.com/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"
         />
       </div>
-      <div class="space-y-4 p-4 w-full">
+      <div class="space-y-4 p-4 w-full ">
         <h2 class="tracking-wider text-2xl font-semibold">
           {{ product[0].name }}
         </h2>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="overflow-hidden md:block hidden w-full">
+      <div class="overflow-hidden col-span-2 md:block hidden w-full">
         <img
           :src="'https://admin.istanakado.com/uploads/' + product[0].image"
           class="p-4 img overflow-hidden h-80 w-full"

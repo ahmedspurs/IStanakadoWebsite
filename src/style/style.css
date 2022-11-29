@@ -30,13 +30,14 @@ li{
 
   .bg-images{
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1612619279080-e7f89757f466?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+    background-image: url('https://images.unsplash.com/photo-1613089222731-8841ac989caa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
     background-size: cover;
-    background-position: center;
+    background-position: bocentertom;
   }
 
+
   .bg-overlay{
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.247);
   }
   /* .bg-image-cats{
     background-image: url('https://media.istockphoto.com/vectors/seamless-pattern-with-wrapped-gifts-vector-id1127498965?k=20&m=1127498965&s=612x612&w=0&h=ekfkb3tP_F2_RLgmZPj06ICVre6d08XJPU8ThT3oP6A=');
