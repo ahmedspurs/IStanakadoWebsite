@@ -8,8 +8,8 @@
     
      -->
 
-<div class="flex justify-center items-center">
- <div class="checkout p-4" v-if="show">
+<div class="flex justify-center items-center w-full">
+ <div class="checkout p-4 w-full" v-if="show">
     <form >
       <!-- phone nunber input -->
       <div class="floating-input relative">
@@ -228,6 +228,17 @@
         >
       </div>
 
+        <!-- message input feild-->
+          <div class="mb-3 ">
+            
+<label for="message" class="block mb-2 px-2 text-sm font-medium text-gray-900 dark:text-white">رساله للمستلم </label>
+<textarea
+              v-model="message"
+
+ id="message" rows="4" class="outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="رساله للمسلتم"></textarea>
+
+          </div>
+
       <!-- total price section -->
       <div class="total-price shadow p-4">
         <b>ملخص الطبيه</b>
@@ -299,6 +310,7 @@ export default {
       cartId: [],
       totalCart: 0,
       addrId: "",
+      message:"",
       show: false,
       cart: [],
     };
@@ -362,6 +374,7 @@ export default {
         transferNumber: this.transferNumber,
         totalPrice: this.totalCart,
         deliveryPrice: this.delPrice,
+        message:this.message
       };
       let loader = this.$loading.show({
         // Optional parameters

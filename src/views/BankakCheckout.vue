@@ -13,7 +13,7 @@
        <div class="checkout p-4">
         <form class="w-full" ref="form" @submit.prevent="checkout()">
           <!-- phone nunber input -->
-          <div class="floating-input mb-5 relative">
+          <div class="floating-input mb-3 relative">
             <input
               type="number"
               id="phone"
@@ -58,7 +58,7 @@
                    cities is static values
                 
                  -->
-          <div class="city py-2">
+          <div class="city mb-3">
             <div
               @click="showCity = !showCity"
               class="
@@ -209,7 +209,7 @@
                    addresses is filtered by value of city
                 
                  -->
-          <div class="address py-2">
+          <div class="address mb-3">
             <div
               @click="showAddr = !showAddr"
               class="
@@ -302,7 +302,7 @@
           </div>
 
           <!-- addres details input feild-->
-          <div class="floating-input mb-5 relative">
+          <div class="floating-input mb-3 relative">
             <input
               id="addressDetails"
               class="
@@ -339,6 +339,81 @@
             >
           </div>
 
+    <!-- message input feild-->
+          <div class="mb-3 ">
+            
+<label for="message" class="block mb-2 px-2 text-sm font-medium text-gray-900 dark:text-white">رساله للمستلم </label>
+<textarea
+              v-model="message"
+
+ id="message" rows="4" class="outline-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black" placeholder="رساله للمسلتم"></textarea>
+
+          </div>
+<!-- total price section -->
+          <div class="total-price">
+            <div class="shadow p-4">
+              
+                <div color="dark">
+                  <span class="text-[13px] font-semibold">ملخص الطلبيه</span>
+                </div>
+                <div class="products grid grid-cols-2 pt-2">
+                  <div color="dark">
+                    <span> عدد المنتجات</span>
+                  </div>
+                  <div color="dark ml-8   ">
+                    <span class="font-semibold"
+                      >{{ $store.state.products.cart.length }} منتج</span
+                    >
+                  </div>
+                </div>
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span> تكلفه المنتجات</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold"
+                      >{{
+                        totalCart
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+                      <span class="text-[12px]"> ج.س </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span>رسوم التوصيل</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold ml-8"
+                      >{{
+                        delPrice
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+
+                      <span class="text-[12px]"> ج.س </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span style="font-size: 17px">المجموع الكلي</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold" style="font-size: 17px"
+                      >{{
+                        (totalCart + delPrice)
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+                      <span class="text-[12px]"> ج.س </span>
+                    </span>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 
                   payments  section for screenshot of bill & payment number 
                   this section hove two input field : 
@@ -379,7 +454,7 @@
             <div class="py-4 justify-center flex-col items-center">
               <!-- payments number input -->
 
-              <div class="floating-input mb-5 relative w-full hidden">
+              <div class="floating-input mb-3 relative w-full hidden">
                 <input
                   type="number"
                   id="payment"
@@ -475,71 +550,7 @@
              <div class="prev p-4">
             <img class="w-full " :src="previewImage" alt="" />
           </div>
- <!-- total price section -->
-          <div class="total-price">
-            <div class="shadow p-4">
-              
-                <div color="dark">
-                  <span class="text-[13px] font-semibold">ملخص الطلبيه</span>
-                </div>
-                <div class="products grid grid-cols-2 pt-2">
-                  <div color="dark">
-                    <span> عدد المنتجات</span>
-                  </div>
-                  <div color="dark ml-8   ">
-                    <span class="font-semibold"
-                      >{{ $store.state.products.cart.length }} منتج</span
-                    >
-                  </div>
-                </div>
-                <div class="products grid grid-cols-2">
-                  <div color="dark">
-                    <span> تكلفه المنتجات</span>
-                  </div>
-                  <div color="dark" class="">
-                    <span class="font-semibold"
-                      >{{
-                        totalCart
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                      }}
-                      <span class="text-[12px]"> ج.س </span>
-                    </span>
-                  </div>
-                </div>
-                <div class="products grid grid-cols-2">
-                  <div color="dark">
-                    <span>رسوم التوصيل</span>
-                  </div>
-                  <div color="dark" class="">
-                    <span class="font-semibold ml-8"
-                      >{{
-                        delPrice
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                      }}
-
-                      <span class="text-[12px]"> ج.س </span>
-                    </span>
-                  </div>
-                </div>
-                <div class="products grid grid-cols-2">
-                  <div color="dark">
-                    <span style="font-size: 17px">المجموع الكلي</span>
-                  </div>
-                  <div color="dark" class="">
-                    <span class="font-semibold" style="font-size: 17px"
-                      >{{
-                        (totalCart + delPrice)
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                      }}
-                      <span class="text-[12px]"> ج.س </span>
-                    </span>
-                  </div>
-                </div>
-            </div>
-          </div>
+ 
           <!-- checkout section -->
           <div class="checkout p-2 text-center">
             <button type="submit"
@@ -571,6 +582,7 @@ export default {
       image: "",
       showCity: true,
       showAddr: true,      previewImage: "",
+      message:"",
 
       delPrice: 0,
       cartId: [],
@@ -661,6 +673,8 @@ export default {
           formData.append("address", this.address);
           formData.append("totalPrice", this.totalCart);
           formData.append("deliveryPrice", this.delPrice);
+          formData.append("message", this.message);
+          
           for (const value of formData.values()) {
             console.log(value);
           }
